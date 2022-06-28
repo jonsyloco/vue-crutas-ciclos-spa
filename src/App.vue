@@ -1,14 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <about-page/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AboutPage from './modules/pokemon/pages/AboutPage.vue'
 
 export default {
   name: 'App',
   components: {
-    
+    AboutPage
   }
 }
 </script>
