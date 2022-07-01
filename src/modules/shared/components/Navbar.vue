@@ -15,7 +15,7 @@
         color: #2c3e50;
         margin: 0 10px;
     }
-    a .router-link-exact-active {
+    div .router-link-exact-active {
         color: #42b983;
     }
 </style>
