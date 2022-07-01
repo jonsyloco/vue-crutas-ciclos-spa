@@ -13,7 +13,7 @@ const routes = [
         component: () => import( /* webpackChunkName: "AboutPage" */ "../modules/pokemon/pages/AboutPage.vue")
     },
     { 
-        path: '/id', 
+        path: '/:pokemonid', 
         component: () => import( /* webpackChunkName: "PokemonPage" */"../modules/pokemon/pages/PokemonPage.vue")
     },
     { 
