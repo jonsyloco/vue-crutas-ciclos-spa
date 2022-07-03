@@ -13,8 +13,15 @@ const routes = [
         component: () => import( /* webpackChunkName: "AboutPage" */ "../modules/pokemon/pages/AboutPage.vue")
     },
     { 
-        path: '/:pokemonid', 
-        component: () => import( /* webpackChunkName: "PokemonPage" */"../modules/pokemon/pages/PokemonPage.vue")
+        path: '/:pokemonid',
+        name: 'pokemon-id',
+        component: () => import( /* webpackChunkName: "PokemonPage" */"../modules/pokemon/pages/PokemonPage.vue"),
+        props: (route) => {
+            console.log(route.params);
+            const { pokemonid } = route.params;
+            const id = Number(pokemonid); // validamos is es un numero
+            return  isNaN(id) ? {pokemonid: 1} : {pokemonid: id}; // se envia el valor por defecto en caso de haber un error en el param            
+        }
     },
     { 
         path: '/:pathMatch(.*)*', 
